@@ -25,6 +25,8 @@ void insertion(int arr[], int value, int index, int n) {
   arr[index] = value;
 }
 
+void deletion(int arr[], int value, int n) {}
+
 int main() {
   int size, insert_value, search_target, deletion_index, index_value;
   int array[100];
