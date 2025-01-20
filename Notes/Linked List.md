@@ -1,9 +1,12 @@
-### Singly Linked List
+## Time Complexity:
 
-- Contains Data and Pointer to the Next Node
 - O(1) insertion
 - O(1) deletion
 - O(n) traversal
+### Singly Linked List
+
+- Contains Data and Pointer to the Next Node
+
 
 ```
 #include <stdio.h>
@@ -40,3 +43,6 @@ int main (int argc, char *argv[]) {
 }
 ```
 
+### Doubly Linked List
+
+- Contains Data and pointers to prev and next nodes of the Linked List
