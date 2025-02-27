@@ -25,7 +25,15 @@ void insertion(int arr[], int value, int index, int n) {
   arr[index] = value;
 }
 
-void deletion(int arr[], int value, int n) {}
+void deletion(int arr[], int value, int n) {
+  for (int i = 0; i < n; i++) {
+    if (arr[i] == value) {
+      for (int j = i; j < n; j++) {
+        arr[j] = arr[j + 1];
+      }
+    }
+  }
+}
 
 int main() {
   int size, insert_value, search_target, deletion_index, index_value;
@@ -49,8 +57,15 @@ int main() {
 
   printf("Enter insert index: ");
   scanf("%d", &index_value);
-
+  size++;
   insertion(array, insert_value, index_value, size);
 
-  traversal(array, size + 1);
+  traversal(array, size);
+
+  printf("Enter value to delete: ");
+  scanf("%d", &search_target);
+
+  deletion(array, search_target, size);
+  size--;
+  traversal(array, size);
 }
